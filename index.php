@@ -20,40 +20,46 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-    <a class="navbar-brand" href="./index.php">TimeIt</a>
+    <div class="container-fluid">
 
-    <!-- Add a button which enables the user to access the navbar's options when the screen size is to small so as to
-    showcase them all on screen.-->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+        <a class="navbar-brand ml-2" href="./index.php">TimeIt</a>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Add a button which enables the user to access the navbar's options when the screen size is to small so as to
+        showcase them all on screen.-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active"><a class="nav-link" href="#">About Us</a></li>
-            <li class="nav-item active"><a class="nav-link" href="#">Meet the team</a></li>
-        </ul>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active"><a class="nav-link" href="#">About Us</a></li>
+                <li class="nav-item active"><a class="nav-link" href="#">Meet the team</a></li>
+            </ul>
+
+            <!-- Login form -->
+            <form class="form-inline my-2 my-lg-0" method="post" style="display: inherit;"
+                  action="./static/time-it-platform/php/scripts/login.php">
+
+                <input class="form-control mr-sm-2" type="username" placeholder="Username" aria-label="Username" name="username" id="username">
+                <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" name="password">
+
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+
+            </form>
+
+        </div>
 
     </div>
-
-    <!-- Login form -->
-    <form class="form-inline my-2 my-lg-0" method="post" style="display: inherit;">
-
-        <input class="form-control mr-sm-2" type="username" placeholder="Username" aria-label="Username" name="username">
-        <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" name="password">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-
-    </form>
 
 </nav>
 
 </header>
 
 
-<div id="accept-terms-popup" class="hidden">
-    <p>By using this site you agree to our <a href="#">Terms and Conditions</a>.
+<div id="accept-terms-popup" class="hidden bg-dark">
+    <p class="text-light">By using this site you agree to our <a href="#">Terms and Conditions</a>.
         Please <a id="accept" href="#">Accept</a> these before using the site.
     </p>
 </div>
@@ -64,6 +70,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <!-- Terms and services script. -->
 <script src="./static/time-it-platform/java-script/cookies-and-terms.js"></script>
 

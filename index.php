@@ -16,7 +16,9 @@
 </head>
 
 <body>
-<header class="navbar navbar-expand-lg navbar-dark bg-dark">
+<header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
     <a class="navbar-brand" href="./index.php">TimeIt</a>
 
@@ -29,19 +31,23 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">About Us</li>
-            <li class="nav-item active">Meet the team</li>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active"><a class="nav-link" href="#">About Us</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#">Meet the team</a></li>
         </ul>
 
     </div>
 
     <!-- Login form -->
-    <form class="form-inline my-2 my-lg-0" method="post">
+    <form class="form-inline my-2 my-lg-0" method="post" style="display: inherit;">
+
         <input class="form-control mr-sm-2" type="username" placeholder="Username" aria-label="Username" name="username">
         <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" name="password">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+
     </form>
+
+</nav>
 
 </header>
 
@@ -54,9 +60,10 @@
 
 </body>
 
-<!-- Main bootstrap script. -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
+<!-- Main bootstrap JavaScript bundled with Popper. -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 <!-- Terms and services script. -->
 <script src="./static/time-it-platform/java-script/cookies-and-terms.js"></script>
 

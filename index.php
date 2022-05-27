@@ -41,35 +41,12 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="mainNavbar">
+        <div class="collapse navbar-collapse order-3" id="mainNavbar">
 
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <ul class="navbar-nav ml-auto w-100 justify-content-end">
                 <li class="nav-item active"><a class="nav-link" href="#">About Us</a></li>
                 <li class="nav-item active"><a class="nav-link" href="#">Meet the team</a></li>
             </ul>
-
-            <!-- Login form -->
-            <!-- The login form will only be displayed if a user is not currently connected to the application -->
-            <?php
-            if($_SESSION['loggedin'] == false){
-                // If no user is currently logged in then display the login form.
-                print <<< END
-            <form class="form-inline my-2 my-lg-0" method="post" style="display: inherit;"
-                  action="./static/time-it-platform/php/scripts/login.php">
-
-                <input class="form-control mr-sm-2" type="username" placeholder="Username" aria-label="Username" name="username" id="username">
-                <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" name="password">
-
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-
-            </form>
-END;
-            } else {
-                // Else display a dropdown menu with the user's allowed actions.
-                echo '<h1 style="color: white;">I am logged in mother-trucker!</h1>';
-            }
-
-            ?>
 
         </div>
 
@@ -88,6 +65,44 @@ END;
         <h1 class="">Welcome to TimeIt!</h1>
         <p class="">Where you can find the most convenient way to manage and create your timetables.</p>
 
+    </div>
+
+    <!-- Login form -->
+    <!-- The login form will only be displayed if a user is not currently connected to the application -->
+    <div class="container-fluid">
+
+    <?php
+    if($_SESSION['loggedin'] == false){
+        // If no user is currently logged in then display the login form.
+        print <<< END
+
+               <form class="form-inline my-2 my-lg-0" method="post" style="display: inherit;"
+                      action="./static/time-it-platform/php/scripts/login.php">
+    
+                   <div class="form-group row">
+                       <div class="col-sm-10">
+                            <input class="form-control mr-sm-2" type="username" placeholder="Username" aria-label="Username" name="username" id="username">
+                       </div>
+                   </div>
+                   
+                   <div class="form-group row">
+                       <div class="col-sm-10">
+                             <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" name="password">
+                       </div>
+                   </div>
+                   
+                   <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+                        </div>
+                    </div>
+         
+               </form>
+       
+END;
+    }
+
+    ?>
     </div>
 
 </section>

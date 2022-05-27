@@ -16,6 +16,7 @@
 
     <!-- index.php main stylesheet -->
     <link href="./static/time-it-platform/style/index.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
@@ -92,6 +93,48 @@ END;
 </section>
 <!-- Ends here -->
 
+<!-- Footer of the page starts here -->
+<footer class="w-100 py-4 flex-shrink-0 bg-light">
+    <div class="container py-4">
+        <div class="row gy-4 gx-5">
+            <div class="col-lg-4 col-md-6">
+                <h5 class="h1">FB.</h5>
+                <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved.</p>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h5 class="mb-3">Quick links</h5>
+                <ul class="list-unstyled text-muted">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Get started</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h5 class="mb-3">Quick links</h5>
+                <ul class="list-unstyled text-muted">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Get started</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h5 class="mb-3">Newsletter</h5>
+                <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                <form action="#">
+                    <div class="input-group mb-3">
+                        <input class="form-control" type="text" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-primary" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Ends here -->
+
 <div id="accept-terms-popup" class="hidden bg-dark">
     <p class="text-light">By using this site you agree to our <a href="#">Terms and Conditions</a>.
         Please <a id="accept" href="#">Accept</a> these before using the site.
@@ -104,10 +147,18 @@ END;
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 <!-- Terms and services script. -->
 <script src="./static/time-it-platform/java-script/cookies-and-terms.js"></script>
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/3ba5977250.js" crossorigin="anonymous"></script>
 
 </html>

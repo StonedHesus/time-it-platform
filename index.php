@@ -13,6 +13,9 @@
 
     <!-- Cookies and terms stylesheet -->
     <link href="./static/time-it-platform/style/cookies-and-terms.css" rel="stylesheet" type="text/css">
+
+    <!-- index.php main stylesheet -->
+    <link href="./static/time-it-platform/style/index.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -75,6 +78,19 @@ END;
 
 </header>
 
+<!-- Greetings message section starts here -->
+<section class="gradient-background" id="welcome-section">
+
+    <div class="container-fluid">
+
+        <!-- Todo: center these item properly.-->
+        <h1 class="">Welcome to TimeIt!</h1>
+        <p class="">Where you can find the most convenient way to manage and create your timetables.</p>
+
+    </div>
+
+</section>
+<!-- Ends here -->
 
 <div id="accept-terms-popup" class="hidden bg-dark">
     <p class="text-light">By using this site you agree to our <a href="#">Terms and Conditions</a>.

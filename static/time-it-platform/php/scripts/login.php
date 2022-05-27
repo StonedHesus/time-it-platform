@@ -10,5 +10,5 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     // If someone tries to access the page via its path, that is without broadcasting a POST request then redirect them
     // to a dynamically generated error page which will invite to go back to the main page.
-    load_corresponding_error_page("404");
+    load_corresponding_error_page("403");
 }

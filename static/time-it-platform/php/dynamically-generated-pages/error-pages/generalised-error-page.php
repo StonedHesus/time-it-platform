@@ -10,8 +10,6 @@ function load_corresponding_error_page($error_code){
      * @author: Andrei-Paul Ionescu
      */
 
-    // TODO: Add a data structure which stores all the error texts and selects the right when for the current error.
-
     // Retrieve the json file containing all the errors and their associated information.
     $errors = file_get_contents("./../../json/errors.json");
 

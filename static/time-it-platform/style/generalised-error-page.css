@@ -2,7 +2,7 @@
 
 
 /* SELECTED TEXT */
-::selection { background: #ff5e99; color: #FFFFFF; text-shadow: 0; }
+::selection { background: #ff5e99; color: #FFFFFF; text-shadow: none; }
 ::-moz-selection { background: #ff5e99; color: #FFFFFF; }
 
 html {

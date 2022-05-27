@@ -18,6 +18,12 @@
 <body>
 <header>
 
+<?php
+    // Initialise a new session and check whether any script relating user login had been validated, this feat is done
+    // by ascertaining whether or not the 'loggedin' key in the session dictionary is set or not.
+    session_start();
+    if(!isset($_SESSION['loggedin'])) $_SESSION['loggedin'] = false;
+?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
     <div class="container-fluid">
@@ -39,6 +45,11 @@
             </ul>
 
             <!-- Login form -->
+            <!-- The login form will only be displayed if a user is not currently connected to the application -->
+            <?php
+            if($_SESSION['loggedin'] == false){
+                // If no user is currently logged in then display the login form.
+                print <<< END
             <form class="form-inline my-2 my-lg-0" method="post" style="display: inherit;"
                   action="./static/time-it-platform/php/scripts/login.php">
 
@@ -48,6 +59,13 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
 
             </form>
+END;
+            } else {
+                // Else display a dropdown menu with the user's allowed actions.
+                echo '<h1 style="color: white;">I am logged in mother-trucker!</h1>';
+            }
+
+            ?>
 
         </div>
 

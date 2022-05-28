@@ -81,7 +81,7 @@
     
                    <div class="form-group row">
                        <div class="col-sm-10">
-                            <input class="form-control mr-sm-2" type="username" placeholder="Username" aria-label="Username" name="username" id="username">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Username" aria-label="Username" name="username" id="username">
                        </div>
                    </div>
                    

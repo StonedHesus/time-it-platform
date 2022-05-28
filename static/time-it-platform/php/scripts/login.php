@@ -4,7 +4,6 @@ require_once './../dynamically-generated-pages/error-pages/generalised-error-pag
 
 // Initialise the variables we require for this script.
 $username = $password = "";
-$username_error = $password_error = $login_error = "";
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     // If the user had properly submitted a POST request then respond to it accordingly.
@@ -14,7 +13,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     // actions according to what is the case.
     if(empty(trim($_POST['username']))){
         // If no username was specified then prompt the user to type one in.
-        $username_error = "Please type-in an username";
+        $_SESSION['loginFormError'] = "Please type-in an username";
+        unset($username, $password);
+        header('Location: ./../dynamically-generated-pages/login/error-handling-login-page.php');
     } else {
         // If not clean the input and store it in the $username variable.
         $username = trim($_POST['username']);
@@ -23,7 +24,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     // Check whether or not the password field is empty and take appropriate actions according to what is the case.
     if(empty(trim($_POST['password']))){
         // If no password was specified then prompt the user to type one in by raising an error.
-        $password_error = "Please enter your password.";
+        $_SESSION['loginFormError'] = "Please enter your password.";
+        unset($username, $password);
+        header('Location: ./../dynamically-generated-pages/login/error-handling-login-page.php');
     } else {
         // If the password was provided then clean the input and store it in the $password variable.
         $password = trim($_POST['password']);
@@ -38,4 +41,4 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 
 // Liberate the occupied memory.
-unset($username, $password, $username_error, $password_error, $login_error);
+unset($username, $password);

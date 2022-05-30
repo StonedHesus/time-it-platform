@@ -30,7 +30,7 @@
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-    <div class="container-fluid">
+    <div class="container">
 
         <a class="navbar-brand ml-2" href="./index.php">TimeIt</a>
 
@@ -59,17 +59,16 @@
 <!-- Greetings message section starts here -->
 <section class="gradient-background" id="welcome-section">
 
-    <div class="container-fluid">
+    <div class="container">
 
-        <!-- Todo: center these item properly.-->
-        <h1 class="">Welcome to TimeIt!</h1>
-        <p class="">Where you can find the most convenient way to manage and create your timetables.</p>
+        <h1 class="text-center pt-5">Welcome to TimeIt!</h1>
+        <p class="text-center pt-5 pb-3">Where you can find the most convenient way to manage and create your timetables.</p>
 
     </div>
 
     <!-- Login form -->
     <!-- The login form will only be displayed if a user is not currently connected to the application -->
-    <div class="container-fluid">
+    <div class="container">
 
     <?php
     if($_SESSION['loggedin'] == false){
@@ -78,15 +77,15 @@
 
                <form class="form-inline my-2 my-lg-0" method="post" style="display: inherit;"
                       action="./static/time-it-platform/php/scripts/login.php">
-    
+  
                    <div class="form-group row">
-                       <div class="col-sm-10">
+                       <div class="col-sm-10 pb-3">
                             <input class="form-control mr-sm-2" type="text" placeholder="Username" aria-label="Username" name="username" id="username">
                        </div>
                    </div>
                    
                    <div class="form-group row">
-                       <div class="col-sm-10">
+                       <div class="col-sm-10 pb-3">
                              <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" name="password">
                        </div>
                    </div>
@@ -94,6 +93,11 @@
                    <div class="form-group row">
                         <div class="col-sm-10">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+                            <div class="form-check mb-2">
+        <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+        <label class="form-check-label" for="autoSizingCheck">
+          Remember me
+        </label>
                         </div>
                     </div>
          
@@ -107,6 +111,39 @@ END;
 
 </section>
 <!-- Ends here -->
+
+<!-- About us section starts here. -->
+<section class="about-us">
+    <div class="container">
+        <h1 class="text-center mt-5">About us</h1>
+        <ul class="list-inline">
+            <li class="list-group-item">
+                <i class="fa-solid fa-chart-simple"></i>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-calendar"></i>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-person"></i>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-champagne-glasses"></i>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- Ends here -->
+
+<!-- Meet the team sections commences here. -->
+<section class="meet-the-team mt-5">
+    <div class="container">
+        <h1 class="text-center">Meet the team</h1>
+    </div>
+</section>
+<!-- Ends here. -->
 
 <!-- Footer of the page starts here -->
 <footer class="w-100 py-4 flex-shrink-0 bg-light">

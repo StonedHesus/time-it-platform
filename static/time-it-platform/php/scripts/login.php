@@ -9,6 +9,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     // If the user had properly submitted a POST request then respond to it accordingly.
     session_start();
 
+    // Check whether both fields were submitted empty and take appropriate actions for this particular situation.
+    if(empty(trim($_POST['username'])) && empty(trim($_POST['password']))){
+        $_SESSION['loginFormError'] = "Please fill-in the form";
+        unset($username, $password);
+        header('Location: ./../dynamically-generated-pages/login/error-handling-login-page.php');
+        exit();
+    }
+
     // Check whether the username field was transmitted empty or not to the server and take appropriate
     // actions according to what is the case.
     if(empty(trim($_POST['username']))){
@@ -16,6 +24,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $_SESSION['loginFormError'] = "Please type-in an username";
         unset($username, $password);
         header('Location: ./../dynamically-generated-pages/login/error-handling-login-page.php');
+        exit;
     } else {
         // If not clean the input and store it in the $username variable.
         $username = trim($_POST['username']);
@@ -27,6 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $_SESSION['loginFormError'] = "Please enter your password.";
         unset($username, $password);
         header('Location: ./../dynamically-generated-pages/login/error-handling-login-page.php');
+        exit();
     } else {
         // If the password was provided then clean the input and store it in the $password variable.
         $password = trim($_POST['password']);

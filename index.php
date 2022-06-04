@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="" />
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
     <title>TimeIt - Welcome to TimeIt where everything finds its right place in your schedule.</title>
 
     <!-- Bootstrap stylesheet -->
@@ -68,47 +71,34 @@
 
     <!-- Login form -->
     <!-- The login form will only be displayed if a user is not currently connected to the application -->
-    <div class="container">
-
-    <?php
-    if($_SESSION['loggedin'] == false){
-        // If no user is currently logged in then display the login form.
-        print <<< END
-
-               <form class="form-inline my-2 my-lg-0" method="post" style="display: inherit;"
-                      action="./static/time-it-platform/php/scripts/login.php">
+    <div class="container solid-background" id="float-in-from-the-left">
+        <form class="form-inline my-2 my-lg-0" method="post" style="display: inherit;"
+                action="./static/time-it-platform/php/scripts/login.php">
   
-                   <div class="form-group row">
-                       <div class="col-sm-10 pb-3">
-                            <input class="form-control mr-sm-2" type="text" placeholder="Username" aria-label="Username" name="username" id="username">
-                       </div>
-                   </div>
+            <div class="form-group row">
+                <div class="col-sm-10 pb-3">
+                     <input class="form-control mr-sm-2" type="text" placeholder="Username" aria-label="Username" name="username" id="username">
+                </div>
+            </div>
                    
-                   <div class="form-group row">
-                       <div class="col-sm-10 pb-3">
-                             <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" name="password">
-                       </div>
-                   </div>
+            <div class="form-group row">
+                <div class="col-sm-10 pb-3">
+                    <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" name="password">
+                </div>
+            </div>
                    
-                   <div class="form-group row">
-                        <div class="col-sm-10">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-                            <div class="form-check mb-2">
-        <input class="form-check-input" type="checkbox" id="autoSizingCheck">
-        <label class="form-check-label" for="autoSizingCheck">
-          Remember me
-        </label>
-                        </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                        <label class="form-check-label" for="autoSizingCheck">
+                          Remember me
+                        </label>
                     </div>
-         
-               </form>
-       
-END;
-    }
-
-    ?>
+                </div>
+        </form>
     </div>
-
 </section>
 <!-- Ends here -->
 

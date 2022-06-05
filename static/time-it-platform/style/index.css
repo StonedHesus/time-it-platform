@@ -11,30 +11,17 @@
 
 /* Ends here. */
 
-/* Login form style commences here. */
-.solid-background{
+/* Welcome section style starts here. */
 
-    background-color: gray;
+.welcome-section__enter-your-email-prompt-input{
+
+    
 }
+/* Ends here. */
 
-#float-in-from-the-left{
+/* About us section style commences here. */
+.about-us{
 
-    position: absolute;
-    left: -100px;
-    width: 100px;
-    height: 100px;
-    background: blue;
-    -webkit-animation: slide 0.5s forwards;
-    -webkit-animation-delay: 2s;
-    animation: slide 0.5s forwards;
-    animation-delay: 2s;
-}
-
-@-webkit-keyframes float-in-from-the-left {
-    100% { left: 0; }
-}
-
-@keyframes float-in-from-the-left {
-    100% { left: 0; }
+    background-color: aqua!important;
 }
 /* Ends here. */

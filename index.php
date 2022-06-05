@@ -30,6 +30,7 @@
     // by ascertaining whether or not the 'loggedin' key in the session dictionary is set or not.
     session_start();
     if(!isset($_SESSION['loggedin'])) $_SESSION['loggedin'] = false;
+    else header("Location ");
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
@@ -46,11 +47,12 @@
 
         <div class="collapse navbar-collapse order-3" id="mainNavbar">
 
-            <ul class="navbar-nav ml-auto w-100 justify-content-end">
+            <ul class="navbar-nav mx-auto">
                 <li class="nav-item active"><a class="nav-link" href="#">About Us</a></li>
                 <li class="nav-item active"><a class="nav-link" href="#">Meet the team</a></li>
             </ul>
 
+            <button class="btn btn-primary"><span>Login</span></button>
         </div>
 
     </div>
@@ -69,43 +71,24 @@
 
     </div>
 
-    <!-- Login form -->
-    <!-- The login form will only be displayed if a user is not currently connected to the application -->
-    <div class="container solid-background" id="float-in-from-the-left">
-        <form class="form-inline my-2 my-lg-0" method="post" style="display: inherit;"
-                action="./static/time-it-platform/php/scripts/login.php">
-  
-            <div class="form-group row">
-                <div class="col-sm-10 pb-3">
-                     <input class="form-control mr-sm-2" type="text" placeholder="Username" aria-label="Username" name="username" id="username">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 pt-5">
+                <h1>It is time that you take control of your schedule by making it healthy and suitable to your needs.</h1>
+                <p class="pt-3 pb-3">Something something something</p>
+                <div class="">
+                    <input class ="welcome-section__enter-your-email-prompt-input " type="email" placeholder="Enter your email" name="email" ></input>
+                    <button class="btn btn-primary welcome-section__enter-your-email-prompt-button"><span class="welcome-section__enter-your-email-prompt-button__text">Get Started</span></button>
                 </div>
             </div>
-                   
-            <div class="form-group row">
-                <div class="col-sm-10 pb-3">
-                    <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" name="password">
-                </div>
-            </div>
-                   
-            <div class="form-group row">
-                <div class="col-sm-10">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-                    <div class="form-check mb-2">
-                        <input class="form-check-input" type="checkbox" id="autoSizingCheck">
-                        <label class="form-check-label" for="autoSizingCheck">
-                          Remember me
-                        </label>
-                    </div>
-                </div>
-        </form>
+        </div>
     </div>
 </section>
-<!-- Ends here -->
 
 <!-- About us section starts here. -->
 <section class="about-us">
     <div class="container">
-        <h1 class="text-center mt-5">About us</h1>
+        <h1 class="text-center pt-4">About us</h1>
         <ul class="list-inline">
             <li class="list-group-item">
                 <i class="fa-solid fa-chart-simple"></i>
@@ -128,7 +111,7 @@
 <!-- Ends here -->
 
 <!-- Meet the team sections commences here. -->
-<section class="meet-the-team mt-5">
+<section class="meet-the-team">
     <div class="container">
         <h1 class="text-center">Meet the team</h1>
     </div>

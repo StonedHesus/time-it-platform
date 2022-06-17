@@ -52,7 +52,10 @@
                 <li class="nav-item active"><a class="nav-link" href="#">Meet the team</a></li>
             </ul>
 
-            <button class="btn btn-primary"><span>Login</span></button>
+            <form action="./static/time-it-platform/php/dynamically-generated-pages/login/error-handling-login-page.php">
+                 <button class="btn btn-primary"><span>Login</span></button>
+            </form>
+            
         </div>
 
     </div>
@@ -77,8 +80,10 @@
                 <h1>It is time that you take control of your schedule by making it healthy and suitable to your needs.</h1>
                 <p class="pt-3 pb-3">Something something something</p>
                 <div class="">
-                    <input class ="welcome-section__enter-your-email-prompt-input " type="email" placeholder="Enter your email" name="email" ></input>
-                    <button class="btn btn-primary welcome-section__enter-your-email-prompt-button"><span class="welcome-section__enter-your-email-prompt-button__text">Get Started</span></button>
+                    <form action="#" method="post">
+                        <input class ="welcome-section__enter-your-email-prompt-input " type="email" placeholder="Enter your email" name="email" ></input>
+                        <button class="btn btn-primary welcome-section__enter-your-email-prompt-button" type="submit"><span class="welcome-section__enter-your-email-prompt-button__text">Get Started</span></button>
+                    </form>
                 </div>
             </div>
         </div>

@@ -1,0 +1,24 @@
+.time-table__container{
+
+    overflow-y: scroll;
+    height: 300px;
+}
+
+.time-table__block{
+
+    height: 6rem;
+    width: 12rem;
+    background: #0c5460;
+    border: solid 6px black;
+}
+
+.touched{
+
+    min-height: 6rem;
+    min-width: 12rem;
+    background: red;
+    border: solid 6px black;
+}
+
+
+

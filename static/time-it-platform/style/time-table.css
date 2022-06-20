@@ -1,7 +1,7 @@
 .time-table__container{
 
     overflow-y: scroll;
-    height: 300px;
+    height: 400px;
 }
 
 .time-table__block{
@@ -10,6 +10,25 @@
     width: 12rem;
     background: #0c5460;
     border: solid 6px black;
+}
+
+.time-table__block__new-activity{
+
+    z-index: 3;
+    height: 6rem;
+    width: 12rem;
+    background: #1c7430;
+}
+
+.time-table__enquiry-form__container{
+
+
+    position: fixed;
+    z-index: 101;
+    display: block;
+    width: 400px;
+    height: 800px;
+    background: #4A575A;
 }
 
 .touched{
